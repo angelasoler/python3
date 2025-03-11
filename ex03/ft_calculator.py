@@ -1,5 +1,7 @@
 class calculator:
+    """Class to perform operations on vectors"""
     def __init__(self, vector) -> None:
+        """Constructor"""
         self.value = vector
 
     """A simple calculator class"""
