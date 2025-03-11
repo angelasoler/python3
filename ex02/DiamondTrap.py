@@ -1,19 +1,24 @@
 from S1E7 import Baratheon, Lannister
 
+
 class King(Baratheon, Lannister):
     """Representing the King family."""
     def __init__(self, first_name, is_alive=True):
         """Constructor for the King family."""
-        super().__init__(first_name, is_alive)
-        self.family_name = "King"
-        self.eyes = "green"
-        self.hairs = "black"
+        return Baratheon.__init__(self, first_name, is_alive)
 
-    def __str__(self):
-        """Return a string representation of the King family."""
-        return super().__str__()
+    def set_eyes(self, eyes):
+        """Set the eyes color of the King family."""
+        self.eyes = eyes
 
-    @classmethod
-    def create_king(cls, first_name, is_alive=True):
-        """Create a King family."""
-        return King(first_name, is_alive)
+    def set_hairs(self, hairs):
+        """Set the hairs color of the King family."""
+        self.hairs = hairs
+
+    def get_eyes(self):
+        """Get the eyes color of the King family."""
+        return self.eyes
+
+    def get_hairs(self):
+        """Get the hairs color of the King family."""
+        return self.hairs
